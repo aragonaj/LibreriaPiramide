@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="/icons/book-icon.png" type="image/png">
+        <title>Librería Pirámide</title>
+
+        <!-- estilos -->
+        <link rel="stylesheet" href="/css/header.css" type="text/css">
+        <link rel="stylesheet" href="/css/main.css" type="text/css">
+        <link rel="stylesheet" href="/css/footer.css" type="text/css">
+        <!-- estilos generales -->
+        <link rel="stylesheet" href="/css/general.css" type="text/css">
+
+        <!-- jQuery -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+        <!-- Incluye jQuery desde el CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body class="body">
+        <!-- 
+        <button class="boton boton-arriba" id="boton-volver">
+            <img 
+                class="imagen imagen-arriba" 
+                alt="Flecha que apunta arriba" 
+                src="/icons/chevron-up-solid.svg">
+        </button> 
+        -->
+        <header class="header">
+            <section class="section-wide-screens">
+                <div class="header-container header-container-info">
+                    <p>Gastos de envío gratis a partir de 19€</p>
+                    <div class="container-phone">
+                        <img 
+                            class="image image-phone" 
+                            alt="Imagen de un telefono" 
+                            src="/icons/phone.svg">
+                        <span>976 000 000</span>
+                    </div>
+                </div>
+    
+                <div class="header-container header-container-user">
+                    <h1>Librería Pirámide</h1>
+                    <div class="container-user-actions">
+                        <div class="container-shopping">
+                            <img 
+                                class="image image-shopping" 
+                                alt="Imagen de un carrito" 
+                                src="/icons/shopping-cart.svg">
+                            <a class="nav-link" href="#">Mi compra</a>
+                        </div>
+                        
+                        <div class="container-login-register">
+                            <a class="nav-link link-login" href="#">Entrar</a>
+                            |
+                            <a class="nav-link link-registro" href="#">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="header-container header-container-business">
+                    <nav class="nav-departments">
+                        <div class="container container-bookshop">
+                            <a class="nav-link link-libreria">Librerías</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-partners">
+                            <a class="nav-link link-partner" href="#partners">Partners</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-events">
+                            <a class="nav-link link-evento">Eventos</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                    </nav>
+    
+                    <div class="container-search-bar">
+                        <input 
+                            class="input-search search-bar" 
+                            type="text" 
+                            placeholder="Buscar por título, autor, categoría, ISBN..."
+                            id="input-search">
+                        <img 
+                                class="image image-search search-icon" 
+                                alt="Icono de búsqueda" 
+                                src="/icons/search_icon.svg"
+                                onclick="buscar()">
+                    </div>
+                </div>
+    
+                <nav class="header-container header-container-sections">
+                    <!-- ATENCIÓN LAS SECCIONES "LIBROS" Y "RECOMENDACIONES" ESTÁN MAL -->
+                    <!-- 1 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-libro" href="#seccion-libros">Top-Libros</a>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-autor" href="#seccion-autores">Autores</a>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-oferta" href="#seccion-ofertas">Ofertas</a>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-recomendacion" href="#seccion-recomendaciones">Recomendaciones</a>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-novedad" href="#seccion-novedades">Novedades</a>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-categoria" href="#seccion-generos">Géneros</a>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="container-nav-link">
+                        <a class="nav-link link-blog" href="#seccion-blog">Blog</a>
+                    </div>
+                </nav>
+            </section>
+            <section class="section-narrow-screens">
+                <div class="container-hidden-menu">
+                    <!-- Eliminar el contenido de este contenedor: se produce duplicidad de código y no es deseable -->
+                    <div class="container-search-bar">
+                        <input 
+                            class="input-search search-bar" 
+                            type="text" 
+                            placeholder="Buscar por título, autor, categoría, ISBN...">
+                        <img 
+                                class="image image-search search-icon" 
+                                alt="Icono de búsqueda" 
+                                src="/icons/search_icon.svg">
+                    </div>
+
+                    <nav class="nav-departments">
+                        <div class="container container-bookshop">
+                            <a class="nav-link link-libreria">Librerías</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-partners">
+                            <a class="nav-link link-partner" href="#seccion-partners">Partners</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-events">
+                            <a class="nav-link link-evento">Eventos</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                    </nav>
+                    <nav class="nav-sections">
+                        <div class="container container-books">
+                            <a class="nav-link link-libro" href="#seccion-libros">Top-Libros</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-authors">
+                            <a class="nav-link link-autor" href="#seccion-autores">Autores</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-bargains">
+                            <a class="nav-link link-oferta" href="#seccion-ofertas">Ofertas</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-suggestions">
+                            <a class="nav-link link-recomendacion" href="#seccion-recomendaciones">Recomendaciones</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-novelties">
+                            <a class="nav-link link-novedad" href="#seccion-novedades">Novedades</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-genres">
+                            <a class="nav-link link-categoria" href="#seccion-generos">Géneros</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                        <div class="container container-blog">
+                            <a class="nav-link link-blog" href="#seccion-blog">Blog</a>
+                            <img 
+                                class="image image-link" 
+                                alt="Icono de una flecha" 
+                                src="/icons/chevron-down.svg">
+                        </div>
+                    </nav>
+                </div>
+                <div class="container-compact-menu">
+                    <h1>Librería Pirámide</h1>
+                    <!-- fuente: https://www.youtube.com/watch?v=aNDqzlAKmZc-->
+                    <div class="container-menu-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main class="main">
+            <!-- Sección blog -->
+            <section class="seccion-blog" id="seccion-blog">
+                <article class="article main-article">
+                    <!-- Imagen-->
+                    <img class="image image-blog" alt="Imagen donde se ven a periodistas tomando declaraciones" src="/images/fotos/prix-goncourt_blog-image.jpg">
+                    <div class="container-info">
+                        <h3 class="encabezado_2">Houris: roman de Kamel Daoud</h3>
+                        <p class="paragraph">
+                            Novela ganadora del prestigioso Premio Goncourt. 
+                            "Da voz al sufrimiento asociado a un periodo oscuro en Argelia, el de las mujeres en particular".
+                        </p>
+                        <!-- <a class="nav-link">Leer más</a> -->
+                    </di>
+                </article>
+                <article class="article secondary-article article_1">
+                    <!-- Imagen-->
+                    <img class="image image-blog" alt="Imagen donde aparece una pila de libros en una ventana" src="/images/fotos/books-blog_florencia-viadana.jpg">
+                    <div class="container-info">
+                        <!-- Fuente: https://medium.com/illumination/the-impact-of-literature-on-mental-health-and-well-being-including-using-literature-as-a-form-of-bfc411347a68-->
+                        <!-- Título h3 -->
+                        <h3 class="encabezado_2">La lectura como herramienta contra el estrés</h3>
+                        <!-- Descripción del artículo -->
+                        <p class="paragraph">
+                            La lectura puede brindar una sensación de conexión y comprensión.
+                        </p>
+                        <!-- Ir a la entrada/artículo -->
+                        <!-- <a class="nav-link">Leer más</a> -->
+                    </di>
+                </article>
+                <article class="article secondary-article article_2">
+                    <!-- Imagen-->
+                    <img class="image image-blog" alt="Imagen de varios libros abiertos los unos sobre los otros" src="/images/fotos/books-blog_gulfer-ergin.jpg">
+                    <div class="container-info">
+                        <!-- Título h3 -->
+                        <h3 class="encabezado_2">Nueva sesión del círculo de lectura: Lerroux</h3>
+                        <!-- Descripción del artículo -->
+                        <p class="paragraph">El próximo sábado comentaremos la obra: "El misterio del cuarto amarillo".</p>
+                        <!-- Ir a la entrada/artículo -->
+                        <!-- <a class="nav-link">Leer más</a> -->
+                    </di>
+                </article>
+                <article class="article secondary-article article_3">
+                    <!-- Imagen-->
+                    <img class="image image-blog" alt="Imagen de una máquina de escribir" src="/images/fotos/typewritter-blog_artem-krapivin.jpg">
+                    <div class="container-info">
+                        <!-- Título h3 -->
+                        <h3 class="encabezado_2">Taller de escritura el próximo mes de junio: Vargas</h3>
+                        <!-- Descripción del artículo -->
+                        <p class="paragraph">La escritora Fred Vargas estará dando clases de escritura durante junio.</p>
+                        <!-- Ir a la entrada/artículo -->
+                        <!-- <a class="nav-link">Leer más</a> -->
+                    </di>
+                </article>
+            </section>
+            <!-- Sección blog.fin-->
+
+            <!-- sección de recomendados-->
+            <!-- fuente del scroll con botones: https://www.youtube.com/watch?v=1fEkWd5hzRY -->
+            <section class="seccion-main seccion-recomendacion" id="seccion-recomendaciones">
+                <article class="contenedor-titulo-seccion">
+                    <h2>Estas son nuestras recomendaciones:</h2>
+                    <a class="nav-link">Ver más</a>
+                </article>
+
+                <hr class="hr">
+                
+                <!-- contenedor de scroll -->
+                <article class="contenedor-botones-scroll">
+                    <div class="contenedor-boton contenedor-boton-izquierdo">
+                        <button class="boton-direccion" onclick="desplazarseIzquierdaRecomendaciones()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="/icons/angle-left-solid.svg">
+                        </button>
+                    </div>
+                    <article class="contenedor-imagenes scroll-suggestions">
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/elCondeDeMontecristo.jpg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/elExtranjero.jpg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/laConjuraDeLosNecios.jpg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/laPerla.jpeg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/laPrincesaDeCleves.jpeg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="/images/cubiertas/nuestraSennoraDeParis.jpg">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                    </article>
+                    <div class="contenedor-boton contenedor-boton-derecho">
+                        <button class="boton-direccion" onclick="desplazarseDerechaRecomendaciones()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="/icons/angle-right-solid.svg">
+                        </button>
+                    </div>
+                </article>
+                <!-- contenedor de scroll.fin -->
+            </section>
+            <!-- sección de recomendados.fin -->
+
+            <!-- Novedades: -->
+            <!-- El misterio del cuarto amarillo, El sabueso de los Baskerville, Matar a un ruiseñor, Gargantúa -->
+            <!-- <section class="seccion-main seccion-novedad" id="seccion-novedades"></section> -->
+            <!-- 
+                Idea cogida de "La casa del libro":
+                    la sección ofertas incluye un contenedor con una imagen de una biblioteca,
+                    dentro de esta imagen varios libros que se encuentran en oferta. 
+                    Finalmente, abajo en un faldón: "Libros en oferta: descuentos de entre 5% y un 20%". 
+                    Además dentro de este contenedor, que es dicho faldón, 
+                    un botón con el contenido de: "Descubrir ofertas"
+
+                    Esta sección ocupa el 100% del ancho del main. Una imagen arriba y un contenedor de alto
+                    unos 9rem(por ejemplo)
+            -->
+            <!-- <section class="seccion-main seccion-oferta" id="seccion-ofertas"></section> -->
+            <!-- sección libros más vendidos -->
+            <!-- <section class="seccion-main seccion-libro" id="seccion-libros"></section> -->
+
+            <!-- Sección de autores -->
+            <section class="seccion-main seccion-autor" id="seccion-autores">
+                <article class="contenedor-titulo-seccion">
+                    <h2>Los autores más excelsos: </h2>
+                    <a class="nav-link">Ver más</a>
+                </article>
+
+                <hr class="hr">
+
+                <article class="contenedor-botones-scroll">
+                    <div class="contenedor-boton contenedor-boton-izquierdo">
+                        <button class="boton-direccion" onclick="desplazarseIzquierdaAutores()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="/icons/angle-left-solid.svg">
+                        </button>
+                    </div>
+                    <article class="contenedor-imagenes scroll-authors">
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/agathaChristie.jpg">
+                            <h5>Agatha Christie</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/annieErnaux.jpg">
+                            <h5>Agatha Christie</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/enidBlyton.jpg">
+                            <h5>Enid Blyton</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/georgesSimenon.jpg">
+                            <h5>Georges Simenon</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/julioVerne.jpg">
+                            <h5>Julio Verne</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/madameDeLaFayette.jpg">
+                            <h5>Madame De La Fayette</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/margueriteDuras.jpg">
+                            <h5>Marguerite Duras</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/moliere.jpg">
+                            <h5>Molière</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/paulScarron.jpg">
+                            <h5>Paul Scarron</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/pierreLemaitre.jpg">
+                            <h5>Pierre Lemaitre</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/simoneDeBeauvoir.jpg">
+                            <h5>Simone De Beauvoir</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="image-card" alt="Imagen de Agatha Christie" src="/images/autores/terryPratchett.jpg">
+                            <h5>Terry Pratchett</h5>
+                            <div class="card-container">
+                                <a class="nav-link">Conocer más</a>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="contenedor-boton contenedor-boton-derecho">
+                        <button class="boton-direccion" onclick="desplazarseDerechaAutores()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="/icons/angle-right-solid.svg">
+                        </button>
+                    </div>
+                </article>
+            </section>
+            <!-- Sección de autores.fin -->
+            
+            <!-- Sección géneros -->
+            <!-- 
+                Sección donde aparecerán los principales géneros (Romance, Fantasía, Thriller/Misterio, Ciencia ficción y No ficción). 
+                Contenedor horizontal que ocupe todo el ancho máximo (90%).Contiene varios elementos con la siguiente descripción:
+                    - Un círculo con una imagen que represente el género
+                    - Un rectángulo, un poco superpuesto al círculo, con el nombre del género (nav-link)
+                    - Un botón, un poco separado de estos dos elementos, con el mensaje de "Consultar más géneros".
+                        Al pulsar el botón, se abrirá un contenedor con la vista de una lista. Al desplegarse la vista,
+                        el botón llevará escrito "Ver géneros populares" y ocultará la vista.
+                        El contenedor de la lista tendrá los siguientes elementos:
+                            - Un título
+                            - Un hr
+                            - Una lista de géneros
+            -->
+            <section class="seccion-main seccion-genero" id="seccion-generos">
+                <article class="contenedor-titulo-seccion">
+                    <h2>Géneros:</h2>
+                    <a class="nav-link">Ver más</a>
+                </article>
+
+                <hr class="hr">
+
+                <article class="container-images">
+                    <ul class="container-images-data">
+                        <li class="container-list-item">
+                            <div class="circle">
+                                <img class="image" alt="Imagen de una pareja" src="/images/generos/romance_lucas-lenzi.webp">
+                            </div>
+                            <div class="rectangle">
+                                <p>Romance</p>
+                            </div>
+                        </li>
+
+                        <li class="container-list-item">
+                            <div class="circle">
+                                <img class="image" alt="Imagen de un castillo en una colina" src="/images/generos/fantasy_fynn-zentner.webp">
+                            </div>
+                            <div class="rectangle">
+                                <p>Fantasía</p>
+                            </div>
+                        </li>
+
+                        <li class="container-list-item">
+                            <div class="circle">
+                                <img class="image" alt="Imagen de un hombre con una fedora" src="/images/generos/mistery_viktor-talashuk.webp">
+                            </div>
+                            <div class="rectangle">
+                                <p>Misterio</p>
+                            </div>
+                        </li>
+
+                        <li class="container-list-item">
+                            <div class="circle">
+                                <img class="image" alt="Imagen de una mujer con un casco de Daft-Punk" src="/images/generos/science-fiction_manny-moreno.webp">
+                            </div>
+                            <div class="rectangle">
+                                <p>Ciencia Ficción</p>
+                            </div>
+                        </li>
+
+                        <li class="container-list-item">
+                            <div class="circle">
+                                <img class="image" alt="Imagen de un gato tumbado sobre una pila de libros" src="/images/generos/non-fiction_aziz-acharki.webp">
+                            </div>
+                            <div class="rectangle">
+                                <p>No Ficción</p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <div class="container-dropdown">
+                    <div class="container-label-wrapper">
+                        <label class="label label-genres" for="input-genres">Mostrar más géneros</label>
+                        <input class="input input-checkbox" type="checkbox" id="input-genres">
+                    </div>
+                </div>
+                <div class="container-list">
+                    <h3 class="">Todos los géneros</h3>
+
+                    <hr>
+
+                    <ul class="container-genre-list">
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Ficción histórica</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Ciencia ficción</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Fantasía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Misterio</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Terror</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Romance</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Aventura</li>
+
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Literatura infantil</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Poesía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Drama(teatro)</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Ensayo</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Autobiografía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Biografía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Realismo mágico</li>
+
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Distopía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Utopía</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Folklore</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Mitología</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Sátira</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">Novela gráfica/cómics</li>
+                        <li class="genre-list-item"><img class="icon icon-list-item" alt="Icono flecha derecha" src="/icons/angle-right-solid.svg">No ficción narrativa</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="section section-info-form">
+                <div class="container-info">
+                    <div class="blur"></div>
+                    <div class="container-data z-index_1">
+                        <div class="container-title">
+                            <h2 class="title">Librería Pirámide</h2>
+                        </div>
+                        <div class="container-tel">
+                            <img class="image image-tel" alt="Icono de un teléfono" src="/icons/phone.svg">
+                            <p class="paragraph">976 000 000</p>
+                        </div>
+                        <div class="container-address">
+                            <img class="image image-address" alt="Icono de un pin" src="/icons/pin.svg">
+                            <p class="paragraph">Dirección: Calle Buendía nº6, Huesca</p>
+                        </div>
+                        <div class="container-schedule">
+                            <p class="paragraph">9:00h a 14:00h | 16:30 a 20:30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-form">
+                    <div class="container-title">
+                        <h3 class="title">¡Accede a lo último de nuestra newsletter!</h3>
+                    </div>
+                    <div class="container-message">
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <form class="form">
+                        <div class="container-form-data">
+                            <div class="container-user">
+                                <div class="container-label-image">
+                                    <img class="image image-user-icon" alt="Icono de un usuario" src="/icons/user.svg">
+                                    <label for="usuario" class="label label-user">Usuario:</label>
+                                </div>
+                                <div class="container-input">
+                                    <input type="text" class="input input-text input-user" name="usuario" id="usuario" placeholder="Nombre del usuario...">
+                                </div>
+                            </div>
+                            <div class="container-email">
+                                <div class="container-label-image">
+                                    <img class="image image-email-icon" alt="Icono de un email" src="/icons/mail.svg">
+                                    <label for="email" class="label label-email">Email:</label>
+                                </div>
+                                <div class="container-input">
+                                    <input type="email" class="input input-text input-email" name="email" id="email" placeholder="Email del usuario...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-submit">
+                            <input class="submit submit-send" type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <hr class="margin-y">
+            <section class="section section-partners">
+                <div class="container-title">
+                    <h3 class="title">Nuestros partners:</h3>
+                </div>
+                <div class="container-logos" id="partners">
+                    <img class="image image-vscode" alt="logo de VSCode" src="/images/partners/vscode.svg">
+                    <img class="image image-angular" alt="logo de Angular" src="/images/partners/angular.svg">
+                    <img class="image image-html" alt="logo de HTML5" src="/images/partners/html5.svg">
+                    <img class="image image-css" alt="logo de CSS" src="/images/partners/css.svg">
+                    <img class="image image-javascript" alt="logo de JavaScript" src="/images/partners/javascript.svg">
+                    <img class="image image-github" alt="logo de GitHub" src="/images/partners/github.svg">
+                </div>
+            </section>
+            <section class="section section-media">
+                <div class="container-title">
+                    <h3 class="title">Nos puedes encontrar en:</h3>
+                </div>
+                <div class="container-media">
+                    <div class="container-media-info">
+                        <img class="image image-twitter" alt="logo de Twitter" src="/images/redes/twitter.svg">
+                        <a class="nav-link link-twitter" href="#">@PiramideLibreria</a>
+                    </div>
+                    <div class="container-media-info">
+                        <img class="image image-telegram"  alt="logo de Telegram" src="/images/redes/telegram.svg">
+                        <a class="nav-link link-telegram" href="#">LibreríaPiramide</a>
+                    </div>
+                    <div class="container-media-info">
+                        <img class="image image-linkedin" alt="logo de LinkedIn" src="/images/redes/linkedin.svg">
+                        <a class="nav-link link-linkedin" href="#">https://www.linkedin.com/in/piramidelibreria/</a>
+                    </div>
+                    <div class="container-media-info">
+                        <img class="image image-whatsapp" alt="logo de WhatsApp" src="/images/redes/whatsapp.svg">
+                        <a class="nav-link link-whatsapp" href="#">600 000 000</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-copyright">
+                <nav class="nav nav-politics">
+                    <a class="nav-link" href="#">Política de uso</a>
+                    <a class="nav-link" href="#">Política de cookies</a>
+                    <a class="nav-link" href="#">Condiciones</a>
+                </nav>
+                <div class="container-copyright">
+                    <p>© 2025 Andrés - Desarrollador Frontend</p>
+                </div>
+            </section>
+        </footer>
+    </body>
+    <!-- javascript -->
+    <script src="/javascript/script.js"></script>
+    <!-- <script src="/javascript/APIScript.js"></script> -->
+</html>
