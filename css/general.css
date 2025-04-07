@@ -1,0 +1,155 @@
+/*
+    BORRAR
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    SOLUCIÓN AL TAMAÑO RESPONSIVO VERTICAL:
+        height: auto;
+        min-height: 10rem;
+        max-height: 5rem;
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+    paleta de colores: https://coolors.co/011627-f71735-41ead4-fdfffc-ff9f1c
+
+    Rich black: #011627
+    Imperial red: #f71735
+    Turquoise: #41ead4
+    Baby powder: #fdfffc
+    Orange peel: #ff9f1c
+
+    fuentes:
+    1. Oxygen: encabezados y títulos / Asap: párrafos y textos largos
+*/
+/*
+    Sitio web de iconos: https://css.gg/icon/
+    Siitio web de iconos: https://icons8.com/icons
+    Sitio web de logos: https://svgl.app/
+*/
+
+/* FUENTES */
+/* Oxygen */
+@font-face {
+    font-family: 'Oxygen';
+    src: url('fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Asap */
+@font-face {
+    font-family: 'Asap';
+    src: url('fonts/Asap/static/Asap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Hepta Slab*/
+/* @font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/Hepta_Slab/HeptaSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+/* FUENTES.FIN */
+
+/* VARIABLES */
+:root {
+    /* color: var(--color-primario) */
+    /* font-family: var(--fuente-encabezados) */
+
+    /* paleta */
+    --color-primario: #011627; /* Rich black */
+    --color-secundario: #f71735; /* Imperial red */
+    --color-terciario: #41ead4; /* Turquoise */
+    --color-cuaternario: #fdfffc; /* Baby powder */
+    --color-quintenario: #ff9f1c; /* Orange peel */
+    --color-primario-claro: #052743; /* Rich black */
+
+    /* fuentes */
+    --fuente-encabezados: 'Oxygen', sans-serif;
+    --fuente-subencabezados: 'Asap', sans-serif;
+    --fuente-general: 'Asap', serif;
+    /* --fuente-parrafos: 'Hepta Slab', serif; NO FUNCIONA */
+
+    /* tamaño de las fuentes */
+    --tamanno-encabezados: clamp(1.125rem, 2vw + 0.5rem, 4rem);
+    --tamanno-subencabezados: clamp(1rem, 1.5vw, 3rem);
+    --tamanno-subencabezados_2: clamp(1rem, 1.25vw, 2.5rem);
+
+    /* grosor de la fuente */
+    --grosor-encabezados: 900;
+    --grosor-subencabezados: 800;
+    --grosor-subencabezados_2: 600;
+}
+/* VARIABLES.FIN */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:not(h1):not(h2):not(h3) {
+    font-size: clamp(0.75rem, 1vw, 2rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: var(--fuente-encabezados);
+    font-size: var(--tamanno-encabezados);
+    font-weight: var(--grosor-encabezados);
+}
+
+h2 {
+    font-family: var(--fuente-subencabezados);
+    font-size: var(--tamanno-subencabezados);
+    font-weight: var(--grosor-subencabezados);
+}
+
+h3 {
+    font-family: var(--fuente-subencabezados_2);
+    font-size: var(--tamanno-subencabezados_2);
+    font-weight: var(--grosor-subencabezados_2);
+}
+
+.body {
+    position: relative;
+
+    height: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+    *:not(h1):not(h2):not(h3) {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-family: var(--fuente-encabezados);
+        font-size: 20px;
+        font-weight: var(--grosor-encabezados);
+    }
+    
+    h2 {
+        font-family: var(--fuente-subencabezados);
+        font-size: 15px;
+        font-weight: var(--grosor-subencabezados);
+    }
+    
+    h3 {
+        font-family: var(--fuente-subencabezados_2);
+        font-size: 12px;
+        font-weight: var(--grosor-subencabezados_2);
+    }
+}
