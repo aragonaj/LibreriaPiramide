@@ -1,0 +1,384 @@
+.margin-y {
+    margin: 1rem 0;
+}
+
+.z-index_1 {
+    z-index: 1;
+}
+
+.blur {
+    height: 100%;
+    width: 100%;
+    max-width: 100vw;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 8px;
+
+    backdrop-filter: blur(2px); 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* FOOTER */
+
+.footer {
+    height: 38rem;
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+.section-info-form {
+    height: auto;
+    width: 100%;
+    /* max-width: 100vw; */
+
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 0.25rem;
+}
+
+.section-partners {
+    height: auto;
+    min-height: 5rem;
+    width: 100%;
+
+    padding: 0.5rem 0;
+
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+
+.section-media {
+    height: auto;
+    min-height: 5rem;
+    width: 100%;
+
+    padding: 0.5rem 0;
+}
+
+.section-copyright {
+    height: auto;
+    min-height: 5rem;
+    width: 100%;
+
+    padding: 0.5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--color-cuaternario);
+    background-color: var(--color-primario-claro);
+}
+
+.section-info-form
+.container-info {
+    height: 100%;
+
+    position: relative;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../images/fotos/bookshop_ugur-akdemir.jpg') center;
+    background-size: cover;
+}
+
+.section-info-form
+.container-form {
+    height: 100%;
+
+    position: relative;
+
+    padding: 0 0 0.5rem 0;
+
+    border-radius: 8px;
+
+    background-color: var(--color-quintenario);
+}
+
+.section-info-form
+.container-data {
+    padding: 0.75rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    border-radius: 8px;
+    
+    color: var(--color-cuaternario);
+}
+
+.section-info-form
+.container-tel {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.section-info-form
+.container-address {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.seccion-info-form
+.container-schedule {
+    z-index: 2;
+}
+
+.section-info-form
+.container-title {
+    height: 3rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info-form
+.container-info
+.image {
+    height: 1.25rem;
+    width: 1.25rem;
+
+    filter: invert(100%);
+}
+
+.section-info-form
+.container-message {
+    height: 8rem;
+    width: 80%;
+
+    padding: 1rem;
+
+    display: block;
+    margin: auto auto;
+}
+
+.section-info-form
+.container-form
+.container-title {
+
+    border-radius: 8px 8px 0 0;
+
+    color: var(--color-cuaternario);
+    background-color: var(--color-primario);
+}
+
+.section-info-form
+.form {
+    height: 12rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: auto 4rem;
+}
+
+.section-info-form
+.container-form-data {
+
+    width: 100%;
+}
+
+.section-info-form
+.container-user {
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info-form
+.container-email {
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info-form
+.container-label-image {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.section-info-form
+.container-submit {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info-form
+.input-text {
+    height: 1.5rem;
+    width: 20rem;
+
+    padding: 0.25rem;
+    margin: 0.5rem;
+
+    border: transparent;
+    border-bottom: 3px solid var(--color-secundario);
+    border-radius: 6px;
+}
+
+.section-info-form
+.input-text:focus {
+    border: none;
+    outline: 2px solid var(--color-primario);
+}
+
+.section-info-form
+.input-text::placeholder {
+    color: var(--color-quintenario);
+}
+
+.section-info-form
+.input-text:focus::placeholder {
+    /* accent-color: var(--color-quintenario) !important;
+    caret-color: var(--color-quintenario) !important; */
+    opacity: 0.4;
+}
+
+.section-info-form
+.submit-send {
+    height: 2rem;
+    width: 10rem;
+
+    border: transparent;
+    border-radius: 6px;
+
+    color: var(--color-cuaternario);
+    background-color: var(--color-primario);
+
+    transition: color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+
+.section-info-form
+.submit-send:hover {
+    outline: 2px solid var(--color-primario);
+    color: var(--color-primario);
+    background-color: var(--color-cuaternario);
+}
+/* sección partners */
+.section-partners
+.container-title {
+    height: 100%;
+}
+
+.section-partners
+.container-title {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-partners
+.container-logos {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-partners
+.container-logos
+.image {
+    height: 3rem;
+    width: 3rem;
+}
+/* sección partners.fin */
+.section-media {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+
+.section-media
+.container-title {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-media
+.container-media {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-media
+.container-media-info {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.section-media
+.image {
+    height: 1rem;
+    width: 1rem;
+}
+
+.section-copyright
+.nav-politics {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section-copyright
+.nav-link {
+    text-decoration: underline;
+    color: var(--color-cuaternario);
+
+    transition: all 0.3s;
+}
+
+.section-copyright
+.nav-link:hover {
+    color: var(--color-quintenario);
+}
+
+@media (max-width: 1200px) {
+    .section-info-form {
+        grid-template-columns: auto;
+        gap: 0.25rem;
+    }
+
+    .section-partners
+    .container-logos
+    .image {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+}
+/* FOOTER.FIN */
