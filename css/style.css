@@ -1,22 +1,31 @@
-/* FUENTES */
+/* ---------------------------------------------------*/
+/* ------ FUENTES ------------------------------------*/
+/* ---------------------------------------------------*/
 /* Oxygen */
-@font-face {
+/* @font-face {
     font-family: 'Oxygen';
-    src: url('./fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+    src: url('./fonts/Oxygen/Oxygen-Regular.woff2') format('woff2'),
+         url('./fonts/Oxygen/Oxygen-Regular.woff') format('woff'),
+         url('./fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 /* Asap */
-@font-face {
-    font-family: 'Asap';
-    src: url('./fonts/Asap/static/Asap-Regular.ttf') format('truetype');
+/* @font-face {
+    font-family: 'Hepta Slap';
+    src: url('./fonts/Hepta Slap/HeptaSlap-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-/* FUENTES.FIN */
+} */
 
-/* VARIABLES */
+/* Hepta Slap */
+/* ---------------------------------------------------*/
+/* ------ FUENTES.FIN --------------------------------*/
+/* ---------------------------------------------------*/
+/* ---------------------------------------------------*/
+/* ------ VARIABLES ----------------------------------*/
+/* ---------------------------------------------------*/
 :root {
     /* paleta */
     --color-primario: #011627; /* Rich black */
@@ -27,7 +36,7 @@
     --color-primario-claro: #052743; /* Rich black */
     /* fuentes */
     --fuente-encabezados: 'Oxygen', sans-serif;
-    --fuente-subencabezados: 'Asap', sans-serif;
+    --fuente-subencabezados: 'Hepta Slap', sans-serif;
     --fuente-general: 'Asap', serif;
     /* tamaño de las fuentes */
     --tamanno-encabezados: clamp(1.125rem, 2vw + 0.5rem, 4rem);
@@ -38,7 +47,9 @@
     --grosor-subencabezados: 800;
     --grosor-subencabezados_2: 600;
 }
-/* VARIABLES.FIN */
+/* ---------------------------------------------------*/
+/* ------ VARIABLES.FIN ------------------------------*/
+/* ---------------------------------------------------*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -104,7 +115,9 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
-
+/* ---------------------------------------------------*/
+/* ------ HEADER -------------------------------------*/
+/* ---------------------------------------------------*/
 .header {
     width: 90%;
 
@@ -122,7 +135,8 @@ h3 {
     margin: 0 auto;
 }
 
-/* header-container-info */
+/* ---------------------------------------------------*/
+/* ------ header-container-info ----------------------*/
 .header-container-info {
     height: 1.75rem;
     width: 100%;
@@ -171,9 +185,8 @@ h3 {
 .container-phone > .image {
     filter: invert(99%) sepia(2%) saturate(345%) hue-rotate(300deg) brightness(102%) contrast(98%);
 }
-/* header-container-info.fin */
-
-/* header-container-user */
+/* ---------------------------------------------------*/
+/* ------ header-container-user ----------------------*/
 .header-container-user {
     height: 4rem;
     width: 100%;
@@ -245,9 +258,8 @@ h3 {
 .nav-link:hover {
     color: var(--color-quintenario) !important;
 }
-/* header-container-user.fin */
-
-/* header-container-business */
+/* ---------------------------------------------------*/
+/* ------ header-container-business ------------------*/
 .header-container-business {
     height: 2.5rem;
     width: 100%;
@@ -318,9 +330,8 @@ h3 {
 
     cursor: pointer;
 }
-/* header-container-business.fin */
-
-/* header-container-sections */
+/* ---------------------------------------------------*/
+/* ------ header-container-sections ------------------*/
 .header-container-sections {
     height: 2.5rem;
     width: 100%;
@@ -375,9 +386,9 @@ h3 {
 .section-narrow-screens {
     display: none;
 }
-/* header-container-sections.fin */
-
-/* MAIN */
+/* ---------------------------------------------------*/
+/* ------ MAIN ---------------------------------------*/
+/* ---------------------------------------------------*/
 .main {
     width: 90%;
 
@@ -393,7 +404,7 @@ h3 {
 
     display: block;
     margin: 0 auto;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 
     /* Añade un efecto de aparición de la sección */
     /* opacity: 0; */
@@ -410,9 +421,8 @@ h3 {
     opacity: 1;
 }
 
-/*
-    SECCIONES DEL MAIN
-*/
+/* ---------------------------------------------------*/
+/* ------ MAIN.generales -----------------------------*/
 .contenedor-titulo-seccion {
     display: flex;
     justify-content: space-between;
@@ -523,13 +533,11 @@ h3 {
     overflow: hidden;
     /* overflow-x: scroll; */
 }
-/*
-    SECCIÓN DE RECOMENDACIONES:
-*/
+/* ---------------------------------------------------*/
+/* ------ seccion-recomendacion ----------------------*/
 .seccion-recomendacion {
     height: auto;
-    min-height: 25rem;
-    /* max-height: 30rem; */
+    min-height: 20rem;
 }
 
 .seccion-recomendacion
@@ -552,8 +560,9 @@ h3 {
 .contenedor-imagenes
 .card
 .imagen {
-    height: 20rem;
-    width: 14rem;
+    height: 15rem;
+    width: 100%;
+    min-width: 10rem;
 }
 
 .seccion-recomendacion
@@ -561,8 +570,8 @@ h3 {
 .contenedor-imagenes
 .card
 .boton-adquirir {
-    height: 2.75rem;
-    width: 7rem;
+    height: 2.25rem;
+    width: 6.25rem;
 
     border-radius: 8px;
     border: none;
@@ -585,32 +594,25 @@ h3 {
     color: var(--color-primario);
     background-color: transparent;
 }
-/*
-    SECCIÓN DE RECOMENDACIONES:
-    CONTENEDOR SCROLL CON BOTONES.FIN
-*/
-/*
-    SECCIÓN DE AUTORES:
-    CONTENEDOR SCROLL CON BOTONES
-*/
+/* ---------------------------------------------------*/
+/* ------ seccion-autor ------------------------------*/
 .seccion-autor {
     height: auto;
-    min-height: 25rem;
+    min-height: 20rem;
     width: 100%;
 }
 
 .seccion-autor
 .contenedor-imagenes
 .card {
-    height: 20rem;
-    min-width: 16rem;
+    min-width: 14rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
 
-    padding-top: 0.15rem;
+    padding: 0.2rem;
 
     border-radius: 8px 8px 0 0;
     border: 3px solid transparent;
@@ -631,15 +633,19 @@ h3 {
 .card
 .image-card {
     height: 15rem;
-    width: 98%;
+    min-width: 100%;
 
-    border-radius: 8px;
+    border-radius: 6px;
+
+    object-fit: cover;
+    object-position: center;
 }
 
 .seccion-autor
+.contenedor-botones-scroll
 .contenedor-imagenes
 .card
-.card-container {
+.container-link {
     height: 2.5rem;
     width: 100%;
 
@@ -654,9 +660,10 @@ h3 {
 }
 
 .seccion-autor
+.contenedor-botones-scroll
 .contenedor-imagenes
 .card
-.card-container
+.container-link
 .nav-link {
     cursor: pointer;
     color: var(--color-cuaternario);
@@ -665,18 +672,12 @@ h3 {
 .seccion-autor
 .contenedor-imagenes
 .card
-.card-container
+.container-link
 .nav-link:hover {
     text-decoration: underline;
 }
-
-/*
-    SECCIÓN DE AUTORES:
-    CONTENEDOR SCROLL CON BOTONES.FIN
-*/
-/*
-    SECCIÓN GÉNEROS
-*/
+/* ---------------------------------------------------*/
+/* ------ seccion-generos ----------------------------*/
 .seccion-genero {
     height: auto;
     width: 90%;
@@ -857,12 +858,8 @@ h3 {
     height: 0.75rem;
     width: 0.75rem;
 }
-/*
-    SECCIÓN GÉNEROS.FIN
-*/
-/*
-    SECCIÓN BLOG
-*/
+/* ---------------------------------------------------*/
+/* ------ seccion-blog -------------------------------*/
 .seccion-blog {
     /* height: 40rem; */
     height: calc(100dvh - 10.75rem);
@@ -952,8 +949,8 @@ h3 {
     background-color: rgba(255, 255, 255, 0.3); /* TRANSPARENCIA ORIGINAL DE 0.1 */
     backdrop-filter: blur(5px);
 }
-
-/* Artículo principal del blog */
+/* ---------------------------------------------------*/
+/* ------ artículo principal del blog ----------------*/
 .seccion-blog
 .main-article
 .container-info
@@ -979,8 +976,8 @@ h3 {
     color: var(--color-cuaternario);
     font-weight: 700;
 }
-
-/* Artículos secundarios del blog */
+/* ---------------------------------------------------*/
+/* ------ artículos secundarios del blog -------------*/
 .seccion-blog
 .secondary-article
 .container-info
@@ -990,12 +987,8 @@ h3 {
     font-size: clamp(1rem, 1.10rem, 1.3rem);
     font-weight: var(--grosor-subencabezados_2);
 }
-/*
-    SECCIÓN BLOG.FIN
-*/
-/*
-    SECCIÓN GALERÍA !!! POR INCLUIR AÚN
-*/
+/* ---------------------------------------------------*/
+/* ------ seccion-galeria ----------------------------*/
 .galeria {
     width: 100%;
     margin: 0 auto;
@@ -1005,12 +998,9 @@ h3 {
     grid-auto-rows: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(min(4370px, 100%), 1fr));
 }
-/*
-    SECCIÓN GALERÍA.FIN
-*/
-
-/* FOOTER */
-
+/* ---------------------------------------------------*/
+/* ------ FOOTER -------------------------------------*/
+/* ---------------------------------------------------*/
 .footer {
     height: 38rem;
     width: 90%;
@@ -1650,7 +1640,8 @@ h3 {
     }
 }
 
-/* animaciones */
+/* ---------------------------------------------------*/
+/* ------ animaciones --------------------------------*/
 @keyframes slideDown {
     from {
         height: 0;
