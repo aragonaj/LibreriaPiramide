@@ -10,11 +10,6 @@
 
         <!-- estilos -->
         <link rel="stylesheet" href="./css/style.css" type="text/css">
-
-        <!-- jQuery -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-        <!-- Incluye jQuery desde el CDN -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body class="body">
         <!-- 
@@ -86,13 +81,13 @@
                         <input 
                             class="input-search search-bar" 
                             type="text" 
-                            placeholder="Buscar por título, autor, categoría, ISBN..."
+                            placeholder="Buscar por título, autor, año, editorial, ISBN..."
                             id="input-search">
                         <img 
                                 class="image image-search search-icon" 
                                 alt="Icono de búsqueda" 
                                 src="./icons/search_icon.svg"
-                                onclick="buscar()">
+                                onclick="buscarLibro()">
                     </div>
                 </div>
     
@@ -311,6 +306,7 @@
                                 src="./icons/angle-left-solid.svg">
                         </button>
                     </div>
+                    
                     <article class="contenedor-imagenes scroll-suggestions">
                         <div class="card">
                             <img 
@@ -355,6 +351,7 @@
                             <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
                         </div>
                     </article>
+
                     <div class="contenedor-boton contenedor-boton-derecho">
                         <button class="boton-direccion" onclick="desplazarseDerechaRecomendaciones()">
                             <img 
@@ -405,98 +402,100 @@
                         </button>
                     </div>
                     <article class="contenedor-imagenes scroll-authors">
+
+                        <!-- https://www.birme.net/?target_width=400&target_height=500 -->
                         <div class="card">
                             <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/agathaChristie.jpg">
                             <h5>Agatha Christie</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/annieErnaux.jpg">
-                            <h5>Agatha Christie</h5>
-                            <div class="card-container">
+                            <img class="image-card" alt="Imagen de Annie Ernaux" src="./images/autores/annieErnaux.jpg">
+                            <h5>Annie Ernaux</h5>
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/enidBlyton.jpg">
+                            <img class="image-card" alt="Imagen de Enid Blyton" src="./images/autores/enidBlyton.jpg">
                             <h5>Enid Blyton</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/georgesSimenon.jpg">
+                            <img class="image-card" alt="Imagen de Georges Simenon" src="./images/autores/georgesSimenon.jpg">
                             <h5>Georges Simenon</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/julioVerne.jpg">
+                            <img class="image-card" alt="Imagen de Julio Verne" src="./images/autores/julioVerne.jpg">
                             <h5>Julio Verne</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/madameDeLaFayette.jpg">
+                            <img class="image-card" alt="Imagen de Madame De Lafayette" src="./images/autores/madameDeLaFayette.jpg">
                             <h5>Madame De La Fayette</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/margueriteDuras.jpg">
+                            <img class="image-card" alt="Imagen de Marguerite Duras" src="./images/autores/margueriteDuras.jpg">
                             <h5>Marguerite Duras</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/moliere.jpg">
+                            <img class="image-card" alt="Imagen de Moliere" src="./images/autores/moliere.jpg">
                             <h5>Molière</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/paulScarron.jpg">
+                            <img class="image-card" alt="Imagen de Paul Scarron" src="./images/autores/paulScarron.jpg">
                             <h5>Paul Scarron</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/pierreLemaitre.jpg">
+                            <img class="image-card" alt="Imagen de Pierre Lemaitre" src="./images/autores/pierreLemaitre.jpg">
                             <h5>Pierre Lemaitre</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/simoneDeBeauvoir.jpg">
+                            <img class="image-card" alt="Imagen de Simone De Beauvoir" src="./images/autores/simoneDeBeauvoir.jpg">
                             <h5>Simone De Beauvoir</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
 
                         <div class="card">
-                            <img class="image-card" alt="Imagen de Agatha Christie" src="./images/autores/terryPratchett.jpg">
+                            <img class="image-card" alt="Imagen de Terry Pratchett" src="./images/autores/terryPratchett.jpg">
                             <h5>Terry Pratchett</h5>
-                            <div class="card-container">
+                            <div class="container-link">
                                 <a class="nav-link">Conocer más</a>
                             </div>
                         </div>
@@ -621,6 +620,7 @@
                     </ul>
                 </div>
             </section>
+            <section id="result"></section>
         </main>
         <footer class="footer">
             <section class="section section-info-form">
@@ -733,5 +733,5 @@
     </body>
     <!-- javascript -->
     <script src="./javascript/script.js"></script>
-    <!-- <script src="/javascript/APIScript.js"></script> -->
 </html>
+
