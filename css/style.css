@@ -11,22 +11,22 @@
 } */
 
 /* Hepta Slap */
-@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
-/* @font-face {
+/* @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap'); */
+@font-face {
     font-family: 'Hepta Slap';
-    src: url('/fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
+    src: url('../fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
+}
 
 /* Asap */
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-/* @font-face {
+/* @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap'); */
+@font-face {
     font-family: 'Asap';
-    src: url('/fonts/asap/static/Asap-Regular.ttf') format('truetype');
+    src: url('../fonts/asap/static/Asap-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
+}
 
 h1, h2 {
     font-family: var(--fuente-encabezados);
