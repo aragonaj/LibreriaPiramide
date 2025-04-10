@@ -2,6 +2,7 @@
 /* ------ FUENTES ------------------------------------*/
 /* ---------------------------------------------------*/
 /* Oxygen */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 @font-face {
     font-family: 'Oxygen';
     src: url('/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
@@ -10,6 +11,7 @@
 }
 
 /* Hepta Slap */
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
 @font-face {
     font-family: 'Hepta Slap';
     src: url('/fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
@@ -18,6 +20,7 @@
 }
 
 /* Asap */
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
     font-family: 'Asap';
     src: url('/fonts/asap/static/Asap-Regular.ttf') format('truetype');
@@ -71,7 +74,7 @@ h5, h6{
     --tamanno-subencabezados2__ss: 12px;
     --tamanno-general_ss: 12px;
     /* grosor de la fuente */
-    --grosor-encabezados: 900;
+    --grosor-encabezados: 700; /* antes 900 */
     --grosor-subencabezados: 700;
     --grosor-subencabezados2: 500;
 }
