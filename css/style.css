@@ -4,7 +4,7 @@
 /* Oxygen */
 @font-face {
     font-family: 'Oxygen';
-    src: url('/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
+    src: url('./fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,7 @@
 /* Hepta Slap */
 @font-face {
     font-family: 'Hepta Slap';
-    src: url('/fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
+    src: url('./fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,7 @@
 /* Asap */
 @font-face {
     font-family: 'Asap';
-    src: url('/fonts/asap/static/Asap-Medium.ttf') format('truetype');
+    src: url('./fonts/asap/static/Asap-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
