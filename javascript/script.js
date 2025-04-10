@@ -148,6 +148,32 @@ function desplazarseDerechaAutores(){
         behavior: 'smooth',
     });
 }
+// SECCIÓN NOVEDADES
+function desplazarseIzquierdaNovedades(){
+    // accedemos al elemento
+    const desplazamientoIzquierdaNovedades = document.querySelector('.scroll-news');
+
+    // el botón correspondiente contiene el onclick que activa la función
+    // al hacerlo, provoca que el contenido realice lo siguiente:
+    desplazamientoIzquierdaNovedades.scrollBy({
+        // no existe la derecha, por eso hay que emplear el "left":
+        // está pensado como una descripción de coordenadas cartesianas.
+        // Solo se puede emplear: izquierda y arriba
+        left: -500, // muévete hacia la izquierda. Hay que emplear valores negativos
+        behavior: 'smooth', // hazlo suavemente
+    });
+}
+
+function desplazarseDerechaNovedades(){
+    // accedemos al elemento
+    const desplazamientoDerechaNovedades = document.querySelector('.scroll-news');
+
+    // se emplea el mismo concepto que en la anterior función
+    desplazamientoDerechaNovedades.scrollBy({
+        left: 500,
+        behavior: 'smooth',
+    });
+}
 // --------------------------------------------------------------------------------------------\\
 // --------------------------------------------------------------------------------------------\\
 // Al situarse el usuario en el tope de la página, el botón que permite 

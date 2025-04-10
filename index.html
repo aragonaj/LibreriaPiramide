@@ -236,7 +236,7 @@
                     <!-- Imagen-->
                     <img class="image image-blog" alt="Imagen donde se ven a periodistas tomando declaraciones" src="./images/fotos/prix-goncourt_blog-image.jpg">
                     <div class="container-info">
-                        <h3 class="encabezado_2">Houris: roman de Kamel Daoud</h3>
+                        <h4 class="encabezado_2">Houris: roman de Kamel Daoud</h4>
                         <p class="paragraph">
                             Novela ganadora del prestigioso Premio Goncourt. 
                             "Da voz al sufrimiento asociado a un periodo oscuro en Argelia, el de las mujeres en particular".
@@ -250,7 +250,7 @@
                     <div class="container-info">
                         <!-- Fuente: https://medium.com/illumination/the-impact-of-literature-on-mental-health-and-well-being-including-using-literature-as-a-form-of-bfc411347a68-->
                         <!-- Título h3 -->
-                        <h3 class="encabezado_2">La lectura como herramienta contra el estrés</h3>
+                        <h4 class="encabezado_2">La lectura como herramienta contra el estrés</h4>
                         <!-- Descripción del artículo -->
                         <p class="paragraph">
                             La lectura puede brindar una sensación de conexión y comprensión.
@@ -264,7 +264,7 @@
                     <img class="image image-blog" alt="Imagen de varios libros abiertos los unos sobre los otros" src="./images/fotos/books-blog_gulfer-ergin.jpg">
                     <div class="container-info">
                         <!-- Título h3 -->
-                        <h3 class="encabezado_2">Nueva sesión del círculo de lectura: Lerroux</h3>
+                        <h4 class="encabezado_2">Nueva sesión del círculo de lectura: Lerroux</h4>
                         <!-- Descripción del artículo -->
                         <p class="paragraph">El próximo sábado comentaremos la obra: "El misterio del cuarto amarillo".</p>
                         <!-- Ir a la entrada/artículo -->
@@ -290,7 +290,7 @@
             <!-- fuente del scroll con botones: https://www.youtube.com/watch?v=1fEkWd5hzRY -->
             <section class="seccion-main seccion-recomendacion" id="seccion-recomendaciones">
                 <article class="contenedor-titulo-seccion">
-                    <h2>Estas son nuestras recomendaciones:</h2>
+                    <h3>Nuestras recomendaciones:</h3>
                     <a class="nav-link">Ver más</a>
                 </article>
 
@@ -365,28 +365,130 @@
             </section>
             <!-- sección de recomendados.fin -->
 
-            <!-- Novedades: -->
-            <!-- El misterio del cuarto amarillo, El sabueso de los Baskerville, Matar a un ruiseñor, Gargantúa -->
-            <!-- <section class="seccion-main seccion-novedad" id="seccion-novedades"></section> -->
-            <!-- 
-                Idea cogida de "La casa del libro":
-                    la sección ofertas incluye un contenedor con una imagen de una biblioteca,
-                    dentro de esta imagen varios libros que se encuentran en oferta. 
-                    Finalmente, abajo en un faldón: "Libros en oferta: descuentos de entre 5% y un 20%". 
-                    Además dentro de este contenedor, que es dicho faldón, 
-                    un botón con el contenido de: "Descubrir ofertas"
+            <!-- Sección novedades -->
+            <section class="seccion-main seccion__novedades" id="seccion-novedades">
+                <div class="contenedor-titulo-seccion">
+                    <h3>Las últimas novedades:</h3>
+                    <a class="nav-link">Ver más</a>
+                </div>
 
-                    Esta sección ocupa el 100% del ancho del main. Una imagen arriba y un contenedor de alto
-                    unos 9rem(por ejemplo)
-            -->
-            <!-- <section class="seccion-main seccion-oferta" id="seccion-ofertas"></section> -->
-            <!-- sección libros más vendidos -->
-            <!-- <section class="seccion-main seccion-libro" id="seccion-libros"></section> -->
+                <hr class="hr">
+                
+                <!-- contenedor de scroll -->
+                <article class="contenedor-botones-scroll">
+                    <div class="contenedor-boton contenedor-boton-izquierdo">
+                        <button class="boton-direccion" onclick="desplazarseIzquierdaNovedades()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="./icons/angle-left-solid.svg">
+                        </button>
+                    </div>
+                    
+                    <article class="contenedor-imagenes scroll-news">
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/baumgartner.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/chanson_douce.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/en_agosto_nos_vemos.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/ensayo_general.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/filles_de_la_mer.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/la_plus_secrete_memoire_des_hommes.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/la_sombra_del_viento.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/la_verite_sur_laffaire_harry_quebert.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/le_livre_des_baltimore.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/le_mystere_henri_pick.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/les_chant_des_revenants.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                        <div class="card">
+                            <img 
+                                class="imagen imagen-cubierta" 
+                                alt="Imagen cubierta de un libro" 
+                                src="./images/cubiertas/novedades/les_miserables_fantine.webp" width="100%" height="15rem">
+                            <button class="boton boton-adquirir"><a class="nav-link">Adquirir</a></button>
+                        </div>
+                    </article>
+
+                    <div class="contenedor-boton contenedor-boton-derecho">
+                        <button class="boton-direccion" onclick="desplazarseDerechaNovedades()">
+                            <img 
+                                class="imagen imagen-icono" 
+                                alt="Imagen de un icono" 
+                                src="./icons/angle-right-solid.svg">
+                        </button>
+                    </div>
+                </article>
+                <!-- contenedor de scroll.fin -->
+            </section>
+            <!-- sección de novedades.fin -->
 
             <!-- Sección de autores -->
             <section class="seccion-main seccion-autor" id="seccion-autores">
                 <article class="contenedor-titulo-seccion">
-                    <h2>Los autores más excelsos: </h2>
+                    <h3>Los autores más excelsos: </h3>
                     <a class="nav-link">Ver más</a>
                 </article>
 
@@ -512,23 +614,41 @@
             </section>
             <!-- Sección de autores.fin -->
             
-            <!-- Sección géneros -->
             <!-- 
-                Sección donde aparecerán los principales géneros (Romance, Fantasía, Thriller/Misterio, Ciencia ficción y No ficción). 
-                Contenedor horizontal que ocupe todo el ancho máximo (90%).Contiene varios elementos con la siguiente descripción:
-                    - Un círculo con una imagen que represente el género
-                    - Un rectángulo, un poco superpuesto al círculo, con el nombre del género (nav-link)
-                    - Un botón, un poco separado de estos dos elementos, con el mensaje de "Consultar más géneros".
-                        Al pulsar el botón, se abrirá un contenedor con la vista de una lista. Al desplegarse la vista,
-                        el botón llevará escrito "Ver géneros populares" y ocultará la vista.
-                        El contenedor de la lista tendrá los siguientes elementos:
-                            - Un título
-                            - Un hr
-                            - Una lista de géneros
+                Idea cogida de "La casa del libro":
+                    la sección ofertas incluye un contenedor con una imagen de una biblioteca,
+                    dentro de esta imagen varios libros que se encuentran en oferta. 
+                    Finalmente, abajo en un faldón: "Libros en oferta: descuentos de entre 5% y un 20%". 
+                    Además dentro de este contenedor, que es dicho faldón, 
+                    un botón con el contenido de: "Descubrir ofertas"
+
+                    Esta sección ocupa el 100% del ancho del main. Una imagen arriba y un contenedor de alto
+                    unos 9rem(por ejemplo)
             -->
+            <!-- <section class="seccion-main seccion__oferta" id="seccion-ofertas">
+                <div class="contenedor-imagenes">
+                    <img class="imagen imagen__principal" alt="Imagen de una librería" src="" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
+                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width=""> 
+                </div>
+                <div class="contenedor__informacion-ofertas">
+                    <div class="contenedor__informacion">
+                        <h4 class="">Ofertas en la sección de literatura clásica</h4>
+                        <p class="parrafo">Aprovecha para conseguir lo mejor de la literatura clásica al 1% descuento</p>
+                        <p class="parrafo">Gratis si accedes a Google Books</p>
+                    </div>
+                    <div class="contenedor__boton">
+                        <button type="button" class="boton boton__ofertas">Acceder a ofertas</button>
+                    </div>
+                </div>
+            </section> -->
             <section class="seccion-main seccion-genero" id="seccion-generos">
                 <article class="contenedor-titulo-seccion">
-                    <h2>Géneros:</h2>
+                    <h3>Géneros:</h3>
                     <a class="nav-link">Ver más</a>
                 </article>
 
@@ -589,7 +709,7 @@
                     </div>
                 </div>
                 <div class="container-list">
-                    <h3 class="">Todos los géneros</h3>
+                    <h6 class="">Todos los géneros</h6>
 
                     <hr>
 
@@ -628,7 +748,7 @@
                     <div class="blur"></div>
                     <div class="container-data z-index_1">
                         <div class="container-title">
-                            <h2 class="title">Librería Pirámide</h2>
+                            <h3 class="title">Librería Pirámide</h3>
                         </div>
                         <div class="container-tel">
                             <img class="image image-tel" alt="Icono de un teléfono" src="./icons/phone.svg">
@@ -685,7 +805,7 @@
             <hr class="margin-y">
             <section class="section section-partners">
                 <div class="container-title">
-                    <h3 class="title">Nuestros partners:</h3>
+                    <h5 class="title">Nuestros partners:</h5>
                 </div>
                 <div class="container-logos" id="partners">
                     <img class="image image-vscode" alt="logo de VSCode" src="./images/partners/vscode.svg">
@@ -698,7 +818,7 @@
             </section>
             <section class="section section-media">
                 <div class="container-title">
-                    <h3 class="title">Nos puedes encontrar en:</h3>
+                    <h5 class="title">Nos puedes encontrar en:</h5>
                 </div>
                 <div class="container-media">
                     <div class="container-media-info">
@@ -733,5 +853,5 @@
     </body>
     <!-- javascript -->
     <script src="./javascript/script.js"></script>
+    <!-- <script src="/javascript/APIScript.js"></script> -->
 </html>
-

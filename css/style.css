@@ -2,24 +2,46 @@
 /* ------ FUENTES ------------------------------------*/
 /* ---------------------------------------------------*/
 /* Oxygen */
-/* @font-face {
+@font-face {
     font-family: 'Oxygen';
-    src: url('./fonts/Oxygen/Oxygen-Regular.woff2') format('woff2'),
-         url('./fonts/Oxygen/Oxygen-Regular.woff') format('woff'),
-         url('./fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+    src: url('/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
-
-/* Asap */
-/* @font-face {
-    font-family: 'Hepta Slap';
-    src: url('./fonts/Hepta Slap/HeptaSlap-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
+}
 
 /* Hepta Slap */
+@font-face {
+    font-family: 'Hepta Slap';
+    src: url('/fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Asap */
+@font-face {
+    font-family: 'Asap';
+    src: url('/fonts/asap/static/Asap-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: var(--fuente-encabezados);
+    font-size: var(--tamanno-encabezados__bs);
+    font-weight: var(--grosor-encabezados);
+}
+
+h3, h4 {
+    font-family: var(--fuente-subencabezados);
+    font-size: var(--tamanno-subencabezados__bs);
+    font-weight: var(--grosor-subencabezados);
+}
+
+h5, h6{
+    font-family: var(--fuente-subencabezados2);
+    font-size: var(--tamanno-subencabezados2__bs);
+    font-weight: var(--grosor-subencabezados2);
+}
 /* ---------------------------------------------------*/
 /* ------ FUENTES.FIN --------------------------------*/
 /* ---------------------------------------------------*/
@@ -35,17 +57,23 @@
     --color-quintenario: #ff9f1c; /* Orange peel */
     --color-primario-claro: #052743; /* Rich black */
     /* fuentes */
-    --fuente-encabezados: 'Oxygen', sans-serif;
-    --fuente-subencabezados: 'Hepta Slap', sans-serif;
-    --fuente-general: 'Asap', serif;
-    /* tamaño de las fuentes */
-    --tamanno-encabezados: clamp(1.125rem, 2vw + 0.5rem, 4rem);
-    --tamanno-subencabezados: clamp(1rem, 1.5vw, 3rem);
-    --tamanno-subencabezados_2: clamp(1rem, 1.25vw, 2.5rem);
+    --fuente-encabezados: 'Oxygen';
+    --fuente-subencabezados: 'Hepta Slap';
+    --fuente-general: 'Asap';
+    /* tamaño de las fuentes en pantallas grandes */
+    --tamanno-encabezados__bs: 3rem;
+    --tamanno-subencabezados__bs: 1.6rem;
+    --tamanno-subencabezados2__bs: 1.4rem;
+    --tamanno-general_bs: 1rem; 
+    /* tamaño de las fuentes en pantallas pequeñas */
+    --tamanno-encabezados__ss: 16px;
+    --tamanno-subencabezados__ss: 14px;
+    --tamanno-subencabezados2__ss: 12px;
+    --tamanno-general_ss: 12px;
     /* grosor de la fuente */
     --grosor-encabezados: 900;
-    --grosor-subencabezados: 800;
-    --grosor-subencabezados_2: 600;
+    --grosor-subencabezados: 700;
+    --grosor-subencabezados2: 500;
 }
 /* ---------------------------------------------------*/
 /* ------ VARIABLES.FIN ------------------------------*/
@@ -54,33 +82,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: var(--fuente-general);
+    font-size: var(--tamanno-general_bs);
 }
 
-*:not(h1):not(h2):not(h3) {
+/* *:not(h1):not(h2):not(h3) {
     font-size: clamp(0.75rem, 1vw, 2rem);
-}
+} */
 
 html {
     scroll-behavior: smooth;
 }
 
-h1 {
-    font-family: var(--fuente-encabezados);
-    font-size: var(--tamanno-encabezados);
-    font-weight: var(--grosor-encabezados);
-}
-
-h2 {
-    font-family: var(--fuente-subencabezados);
-    font-size: var(--tamanno-subencabezados);
-    font-weight: var(--grosor-subencabezados);
-}
-
-h3 {
-    font-family: var(--fuente-subencabezados_2);
-    font-size: var(--tamanno-subencabezados_2);
-    font-weight: var(--grosor-subencabezados_2);
-}
 
 .body {
     position: relative;
@@ -441,6 +455,8 @@ h3 {
 
     cursor: pointer;
 
+    font-family: 'Hepta Slap';
+    font-size: 1.4rem;
     font-weight: var(--grosor-subencabezados);
     color: var(--color-quintenario);
 
@@ -463,7 +479,7 @@ h3 {
 }
 
 .contenedor-botones-scroll {
-    /* height: 25rem; */
+    min-height: 20rem;
     width: 100%;
 
     position: relative;
@@ -540,7 +556,7 @@ h3 {
     min-height: 20rem;
 }
 
-.seccion-recomendacion
+/* .seccion-recomendacion */
 .contenedor-botones-scroll
 .contenedor-imagenes
 .card {
@@ -550,12 +566,12 @@ h3 {
 
     gap: 0.5rem;
 
-    padding: 0 0.25rem;
+    padding: 0.25rem;
 
     scroll-snap-align: start;
 }
 
-.seccion-recomendacion
+/* .seccion-recomendacion */
 .contenedor-botones-scroll
 .contenedor-imagenes
 .card
@@ -565,7 +581,7 @@ h3 {
     min-width: 10rem;
 }
 
-.seccion-recomendacion
+/* .seccion-recomendacion */
 .contenedor-botones-scroll
 .contenedor-imagenes
 .card
@@ -584,7 +600,7 @@ h3 {
     transition: all 0.5s;
 }
 
-.seccion-recomendacion
+/* .seccion-recomendacion */
 .contenedor-botones-scroll
 .contenedor-imagenes
 .card
@@ -633,7 +649,7 @@ h3 {
 .card
 .image-card {
     height: 15rem;
-    min-width: 100%;
+    width: calc(100% - 0.2rem);
 
     border-radius: 6px;
 
@@ -998,6 +1014,84 @@ h3 {
     grid-auto-rows: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(min(4370px, 100%), 1fr));
 }
+/* ---------------------------------------------------*/
+/* ------ seccion-ofertas ----------------------------*/
+.seccion__oferta 
+.contenedor-imagenes {
+    height: 25rem;
+    width: 100%;
+
+    position: relative;
+
+    border-radius: 8px 8px 0 0;
+
+    background-color: grey;
+}
+
+.seccion__oferta 
+.contenedor-imagenes
+.imagen__principal {
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 8px 8px 0 0;
+}
+
+.seccion__oferta
+.contenedor__informacion-ofertas {
+    width: 100%;
+
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    border-radius: 0 0 8px 8px;
+
+    color: var(--color-cuaternario);
+    background-color: var(--color-primario);
+}
+
+.seccion__oferta
+.contenedor__informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.seccion__oferta
+.contenedor__boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion__oferta
+.contenedor__boton
+.boton__ofertas {
+    height: 4rem;
+    width: 16rem;
+
+    border: none;
+    border-radius: 8px;
+
+    color: var(--color-primario);
+    background-color: var(--color-cuaternario);
+
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.seccion__oferta
+.contenedor__boton
+.boton__ofertas:hover {
+    outline: 1px solid var(--color-cuaternario);
+    border: 1px solid var(--color-cuaternario);
+    color: var(--color-cuaternario);
+    background-color: var(--color-primario);
+}
+
 /* ---------------------------------------------------*/
 /* ------ FOOTER -------------------------------------*/
 /* ---------------------------------------------------*/
@@ -1484,6 +1578,9 @@ h3 {
 
     .container-search-bar
     .search-icon {
+        height: 1.25rem;
+        width: 1.25rem;
+
         position: absolute;
         top: 50%;
         right: 2.30rem;
@@ -1590,6 +1687,35 @@ h3 {
 }
 
 @media (max-width: 920px) {
+    h1, h2 {
+        font-family: var(--fuente-encabezados);
+        font-size: var(--tamanno-encabezados__ss);
+        font-weight: var(--grosor-encabezados);
+    }
+    
+    h3, h4 {
+        font-family: var(--fuente-subencabezados);
+        font-size: var(--tamanno-subencabezados__ss);
+        font-weight: var(--grosor-subencabezados);
+    }
+    
+    h5, h6{
+        font-family: var(--fuente-subencabezados2);
+        font-size: var(--tamanno-subencabezados2__ss);
+        font-weight: var(--grosor-subencabezados2);
+    }
+
+    * {
+        font-family: 'Asap';
+        font-size: var(--tamanno-general_ss);
+    }
+
+    .seccion-main
+    .nav-link {
+        font-family: 'Hepta Slap';
+        font-size: 12px;
+    }
+
     .main
     .contenedor-boton {
         display: none;
@@ -1617,27 +1743,13 @@ h3 {
 }
 
 @media (max-width: 400px) {
-    *:not(h1):not(h2):not(h3) {
-        font-size: 10px;
-    }
+    
 
-    h1 {
-        font-family: var(--fuente-encabezados);
-        font-size: 20px;
-        font-weight: var(--grosor-encabezados);
-    }
+    /* *:not(h1):not(h2):not(h3) {
+        font-size: 10px;
+    } */
+
     
-    h2 {
-        font-family: var(--fuente-subencabezados);
-        font-size: 15px;
-        font-weight: var(--grosor-subencabezados);
-    }
-    
-    h3 {
-        font-family: var(--fuente-subencabezados_2);
-        font-size: 12px;
-        font-weight: var(--grosor-subencabezados_2);
-    }
 }
 
 /* ---------------------------------------------------*/
