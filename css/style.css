@@ -3,30 +3,30 @@
 /* ---------------------------------------------------*/
 /* Oxygen */
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-@font-face {
+/* @font-face {
     font-family: 'Oxygen';
     src: url('/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 /* Hepta Slap */
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
-@font-face {
+/* @font-face {
     font-family: 'Hepta Slap';
     src: url('/fonts/heptaslab/static/HeptaSlab-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 /* Asap */
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+/* @font-face {
     font-family: 'Asap';
     src: url('/fonts/asap/static/Asap-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 h1, h2 {
     font-family: var(--fuente-encabezados);
@@ -45,6 +45,24 @@ h5, h6{
     font-size: var(--tamanno-subencabezados2__bs);
     font-weight: var(--grosor-subencabezados2);
 }
+
+
+.hepta-slab-encabezados {
+    font-family: "Hepta Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.asap-general {
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
 /* ---------------------------------------------------*/
 /* ------ FUENTES.FIN --------------------------------*/
 /* ---------------------------------------------------*/
@@ -61,8 +79,8 @@ h5, h6{
     --color-primario-claro: #052743; /* Rich black */
     /* fuentes */
     --fuente-encabezados: 'Oxygen';
-    --fuente-subencabezados: 'Hepta Slap';
-    --fuente-general: 'Asap';
+    --fuente-subencabezados: 'Hepta Slap', serif;
+    --fuente-general: 'Asap', sans-serif;
     /* tamaño de las fuentes en pantallas grandes */
     --tamanno-encabezados__bs: 3rem;
     --tamanno-subencabezados__bs: 1.6rem;
