@@ -1042,20 +1042,48 @@ html {
     height: 25rem;
     width: 100%;
 
+    overflow: hidden;
+
     position: relative;
 
     border-radius: 8px 8px 0 0;
-
-    background-color: grey;
 }
 
 .seccion__oferta 
 .contenedor-imagenes
 .imagen__principal {
+    height: 25rem;
+    width: 100%;
+    
     object-fit: cover;
     object-position: center;
 
     border-radius: 8px 8px 0 0;
+
+    filter: blur(2px);
+}
+
+.seccion__oferta 
+.contenedor-imagenes
+.images__container {
+    height: 16rem;
+    width: 80%;
+
+    position: absolute;
+    top: 4rem;
+    left: 10%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion__oferta 
+.contenedor-imagenes
+.images__container
+.imagen {
+    width: 10rem;
+    box-shadow: 4px 4px 15px #0f0f0f, 4px 4px 8px #1f2225;
 }
 
 .seccion__oferta
@@ -1090,8 +1118,8 @@ html {
 .seccion__oferta
 .contenedor__boton
 .boton__ofertas {
-    height: 4rem;
-    width: 16rem;
+    height: clamp(2.75rem, 3.5rem, 4.5rem); /* 4rem */
+    width: clamp(7rem, 12rem, 16rem); /* 16rem */
 
     border: none;
     border-radius: 8px;
@@ -1112,7 +1140,55 @@ html {
     color: var(--color-cuaternario);
     background-color: var(--color-primario);
 }
+/* ---------------------------------------------------*/
+/* ------ seccion-search-results ---------------------*/
+.search__container {
+    width: 40rem;
+    padding: 0.25rem;
 
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-template-rows: repeat(4, auto);
+    gap: 0.25rem;
+}
+
+.book-title__container {
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-column: span 2 / span 2;
+}
+
+.book-thumbnail__container {
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+}
+
+.book-author__container {
+    grid-row-start: 2;
+}
+
+.book-year__container {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.book-publisher__container {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.book-description__container {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+
+.height__paragraph-container {
+    height: 2.5rem;
+}
 /* ---------------------------------------------------*/
 /* ------ FOOTER -------------------------------------*/
 /* ---------------------------------------------------*/
@@ -1472,6 +1548,11 @@ html {
         height: 1.75rem;
         width: 1.75rem;
     }
+
+    /* seccion__oferta */
+    .imagen__libro-4, .imagen__libro-5 {
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1705,6 +1786,14 @@ html {
     .container .image-link {
         filter: invert(100%) sepia(10%) saturate(200%) hue-rotate(0deg) brightness(115%) contrast(100%);
     }
+
+    /* sección ofertas */
+    .seccion__oferta
+    .contenedor__informacion-ofertas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 920px) {
@@ -1763,8 +1852,12 @@ html {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     
+    /* seccion__oferta */
+    .imagen__libro-3, .imagen__libro-4, .imagen__libro-5 {
+        display: none;
+    }
 
     /* *:not(h1):not(h2):not(h3) {
         font-size: 10px;

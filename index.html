@@ -230,6 +230,8 @@
             </section>
         </header>
         <main class="main">
+            <!-- Sección búsquedas -->
+            <section class="section-main search-results__section" id="result"></section>
             <!-- Sección blog -->
             <section class="seccion-blog" id="seccion-blog">
                 <article class="article main-article">
@@ -614,26 +616,16 @@
             </section>
             <!-- Sección de autores.fin -->
             
-            <!-- 
-                Idea cogida de "La casa del libro":
-                    la sección ofertas incluye un contenedor con una imagen de una biblioteca,
-                    dentro de esta imagen varios libros que se encuentran en oferta. 
-                    Finalmente, abajo en un faldón: "Libros en oferta: descuentos de entre 5% y un 20%". 
-                    Además dentro de este contenedor, que es dicho faldón, 
-                    un botón con el contenido de: "Descubrir ofertas"
-
-                    Esta sección ocupa el 100% del ancho del main. Una imagen arriba y un contenedor de alto
-                    unos 9rem(por ejemplo)
-            -->
-            <!-- <section class="seccion-main seccion__oferta" id="seccion-ofertas">
+            <section class="seccion-main seccion__oferta" id="seccion-ofertas">
                 <div class="contenedor-imagenes">
-                    <img class="imagen imagen__principal" alt="Imagen de una librería" src="" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width="">
-                    <img class="imagen imagen__libro" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/" height="" width=""> 
+                    <img class="imagen imagen__principal" alt="Imagen de una librería" src="./images/fotos/library__rafael-cosquiere.jpg" height="25rem" width="100%">
+                    <div class="images__container">
+                        <img class="imagen imagen__libro-1" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/el_misterio_de_la_casa_roja.jpg" width="10rem">
+                        <img class="imagen imagen__libro-2" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/el_misterio_del_cuarto_amarillo.jpg" width="10rem">
+                        <img class="imagen imagen__libro-3" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/memories_dune_jeune_fille_rangee.jpg" width="10rem">
+                        <img class="imagen imagen__libro-4" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/michel_de_montaigne.jpg" width="10rem">
+                        <img class="imagen imagen__libro-5" alt="Imagen de la portada de un libro" src="./images/cubiertas/ofertas/miguel_strogoff.jpg" width="10rem">
+                    </div>
                 </div>
                 <div class="contenedor__informacion-ofertas">
                     <div class="contenedor__informacion">
@@ -645,7 +637,8 @@
                         <button type="button" class="boton boton__ofertas">Acceder a ofertas</button>
                     </div>
                 </div>
-            </section> -->
+            </section>
+
             <section class="seccion-main seccion-genero" id="seccion-generos">
                 <article class="contenedor-titulo-seccion">
                     <h3>Géneros:</h3>
@@ -740,7 +733,6 @@
                     </ul>
                 </div>
             </section>
-            <section id="result"></section>
         </main>
         <footer class="footer">
             <section class="section section-info-form">
